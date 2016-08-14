@@ -19,8 +19,6 @@ SELECT
 	, [YogiId]
 	, [PracticeDate]
 	, [InstructorName]
-	--, [ClassType]
-	--, [Rating]
 
 FROM [dbo].[YogaPractice]
 
