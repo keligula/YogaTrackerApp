@@ -1,7 +1,6 @@
 ﻿(function (moduleOptions) {
     "use strict";
 
-    //  https://github.com/johnpapa/angular-styleguide#moduleOptionss
     var defaultDependencies = [
         'ui.bootstrap',
         'ngRoute',
@@ -10,11 +9,7 @@
     ];
 
     var arrOfDep = getModuleDependencies(moduleOptions, defaultDependencies);
-    //console.log('array of dependencies', sabio);
-
     var app = angular.module(appName, arrOfDep);
-
-    //app.value('$keligula', moduleOptions.page);
 
     if (moduleOptions) {
         processModuleOptions(moduleOptions, app);
@@ -40,7 +35,6 @@
                 clientApp.run(runner);
             }
         }
-
 
     }
 
