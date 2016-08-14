@@ -20,9 +20,7 @@
         vm.yogaPractice = null;
         vm.rate = 2;
         vm.max = 5;
-        //vm.percent = null;
         vm.isReadonly = false;
-        //vm.overStar = null;
 
         vm.addYogaPractice = _addYogaPractice;
         vm.hoveringOver = _hoveringOver;
@@ -33,7 +31,6 @@
 
         function render() {
             console.log("This is my yoga site.")
-
         }
 
         //POST: add practice upon clicking Submit button on modal form
@@ -54,14 +51,12 @@
 
         };
 
-        // Something fishy with response.data.item and reloading of the modal //
         function _onAddSuccess(response) {
             vm.yogaPractice = response.item;
             console.log("practice is added!", vm.yogaPractice)
-            //vm.yogaForm.$setPristine();
         };
 
-        2
+        
         function _onAddError(jqXhr, error) {
             vm.$alertService.error();
         };
