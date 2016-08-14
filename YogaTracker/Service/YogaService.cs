@@ -1,5 +1,5 @@
-using Keligula.Data;
-using Keligula.Services;
+using KellyProject.Data;
+using KellyProject.Services;
 using KellyProject.Models.Requests;
 using KellyProject.Services.Interfaces;
 using System;
