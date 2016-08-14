@@ -1,0 +1,82 @@
+﻿
+
+<br />
+<div class="heading-block title-center nobottomborder">
+    <h1>Practice By Yogi</h1>
+
+    <!--<div><button type="button" class="btn btn-defult" ng-click="list.getAllPractices()">GET ALL</button></div>-->
+    <!--<div class="btn-group">
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" ng-click="list.getPracticesByYogi(practice.yogiId)">
+            Pick-A-Yogi <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Kelly</a></li>
+            <li><a href="#">Anthony</a></li>
+        </ul>
+    </div>-->
+</div>
+
+
+<!-- Yogi dropdown -->
+<!--<div class="form-group">
+    <label class="dropdown" for="selectYogi">Which yogi is this?</label>
+    <select id="selectYogi"
+            class="form-control tleft past-enabled ng-class:{'error': KC.showYogaPracticeErrors && !KC.yogaForm.YogiId.$valid}"
+            name="yogiId"
+            data-ng-model="KC.yogaPractice.yogiId"
+            ng-options="KC.YogiId as KC.YogiName for KC in KC.yogiOptions"
+            required>
+        <option value="">Select Yogi</option>
+    </select>
+    <div role="alert" class="help-inline error" style="color:red;">
+        <span class="error" ng-show="KC.showNewPageErrors && KC.yogaForm.YogiId.$error.required">Yogi selection is required.</span>
+    </div>
+</div>-->
+<!--<div><button type="button" id="cmdDeletePractice" class="btn btn-danger" ng-click="list.getPracticesByYogi(practice.yogiId)">YAY</button></div>-->
+<!--<div class="main-content container-fluid p-0">
+    <div class="title-center nobottomborder">-->
+
+<!-- this is from Autodealio -->
+<div class="panel-heading"></div>
+<div class="panel-body admin-body">
+    <div class="row">
+        <div class="widget">
+            <div class="widget-heading">
+            </div>
+            <div class="widget-body">
+
+
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th class="col-md-1">#</th>
+                            <th class="col-md-2">Yogi Name</th>
+                            <th class="col-md-2">Practice Date</th>
+                            <th class="col-md-2">Instructor Name</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="" data-ng-repeat="practice in list.practices track by practice.practiceId">
+
+                            <td class="tableColPracticeId"> {{practice.practiceId}} </td>
+                            <td class="tableColYogiId"> {{practice.yogiId}} </td>
+                            <td class="tableColPracticeDate"> {{practice.practiceDate}} </td>
+                            <td class="tableColInstructorName"> {{practice.instructorName}} </td>                        
+
+                        </tr>
+
+                    </tbody>
+                </table>
+                <br />
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="divider divider-center divider-short divider-margin"><i class="icon-time"></i></div>

@@ -1,0 +1,125 @@
+﻿
+
+<div class="heading-block title-center nobottomborder"></div>
+
+<div class="heading-block title-center nobottomborder">
+    <h1>Yoga or Bust.</h1>
+    <span>Track your personal practice to make sure you're getting your money's worth.</span>
+</div>
+
+<div id="countdown-ex1" class="countdown countdown-large divcenter bottommargin" style="max-width:700px;"></div>
+
+<div class="clear"></div>
+
+<!-- Button trigger modal -->
+<div class="wrapbtn"><button class="btn btn-default btn-lg center" data-toggle="modal" data-target="#myModal">Add Practice</button></div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-body">
+
+            <form id="yogaForm" name="KC.yogaForm" ng-submit="KC.addYogaPractice()" novalidate>
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Add a practice.</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Yogi dropdown -->
+                        <div class="form-group">
+                            <label class="dropdown" for="selectYogi">Which yogi is this?</label>
+                            <select id="selectYogi"
+                                    class="form-control tleft past-enabled ng-class:{'error': KC.showYogaPracticeErrors && !KC.yogaForm.YogiId.$valid}"
+                                    name="yogiId"
+                                    data-ng-model="KC.yogaPractice.yogiId"
+                                    ng-options="KC.YogiId as KC.YogiName for KC in KC.yogiOptions"
+                                    required>
+                                <option value="">Select Yogi</option>
+                            </select>
+                            <div role="alert" class="help-inline error" style="color:red;">
+                                <span class="error" ng-show="KC.showNewPageErrors && KC.yogaForm.YogiId.$error.required">Yogi selection is required.</span>
+                            </div>
+                        </div>
+
+                        <!-- Enter a date -->
+                        <div class="form-group">
+                            <label for="">Enter a date.</label>
+                            <input id="practiceDate"
+                                   class="sm-form-control tleft past-enabled"
+                                   name="practiceDate"
+                                   data-ng-model="KC.yogaPractice.PracticeDate"
+                                   type="text"
+                                   value=""
+                                   placeholder="MM/DD/YYYY">
+                        </div>
+
+                        <!-- Instructor Name -->
+                        <div class="form-group">
+                            <label for="">Instructor Name</label>
+                            <input id="instructorName"
+                                   class="sm-form-control tleft past-enabled"
+                                   name="instructorName"
+                                   data-ng-model="KC.yogaPractice.InstructorName"
+                                   type="text"
+                                   value=""
+                                   placeholder="Enter instructor name here"
+                                   required>
+                        </div>
+
+                        <!-- Rate your practice! Need to add star icons via font-awesome -->
+                        <div class="form-group">
+                            <label for="">Rate Your Practice!</label>
+                        
+                            <!--<uib-rating ng-model="KC.rate"
+                                        max="KC.max"
+                                        on-hover="hoveringOver(value)"
+                                        on-leave="overStar = null"></uib-rating>-->
+
+                            <uib-rating ng-model="KC.yogaPractice.Rating"
+                                        max="KC.max"
+                                        read-only="isReadonly"
+                                        on-hover="KC.hoveringOver(value)"
+                                        on-leave="KC.overStar = null"
+                                        titles="['one', 'two', 'three']"
+                                        aria-labelledby="default-rating"></uib-rating>
+
+
+                            <!--<span class="fa fa-bolt fa-2x"></span>
+                            <span class="fa fa-bolt fa-2x"></span>
+                            <span class="fa fa-bolt fa-2x"></span>
+                            <span class="fa fa-bolt fa-2x"></span>
+                            <span class="fa fa-bolt fa-2x"></span>-->
+                            <!--<select
+                            i class="fa fa-bolt fa-lg"
+                            name="rating"
+                            data-ng-model="KC.yogaPractice.Rating"
+                            ></select>-->
+                            <!--<div class="white-section">
+                                <select class="fa fa-bolt" max="5" data-stars="5" data-size="lg" data-glyphicon="true" data-rating-class="fa fa-bolt" data-default-caption="{rating} Bolts" data-star-captions="{}"></select>
+                            </div>-->
+
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="practiceSubmit" class="btn btn-primary">Add Practice</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- image of Yogi to the bottom of page -->
+
+<div class="yogapose"><img src="/images/img-thing.jpeg" /></div>
+
+
+<div class="divider divider-center divider-short divider-margin"><i class="icon-time"></i></div>
