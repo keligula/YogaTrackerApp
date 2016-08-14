@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     "use strict";
 
     angular.module(appName)
@@ -17,11 +17,7 @@
         svc.getPracticeByYogiId = _getPracticeByYogiId;
         svc.getAllPractices = _getAllPractices;
 
-        function _test() {
-
-            console.log("service is working");
-        };
-
+        
         // POST: Ajax call to add practice
         function _addPractice(payload, onAddSuccess, onAddError) {
 
