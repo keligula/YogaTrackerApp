@@ -29,7 +29,7 @@ namespace KellyProject.Controllers.ApiControllers
         }
 
 
-        //POST: Add new practice to database
+        // POST: Add new practice to database
         [Route("practices"), HttpPost]
         public HttpResponseMessage InsertPractice(YogaPracticeRequestModel model)
         {
