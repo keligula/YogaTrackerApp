@@ -1,4 +1,4 @@
-﻿using Keligula.Data;
+using Keligula.Data;
 using Keligula.Services;
 using KellyProject.Models.Requests;
 using KellyProject.Services.Interfaces;
@@ -26,8 +26,6 @@ namespace KellyProject.Services
                    paramCollection.AddWithValue("@YogiId", model.YogiId);
                    paramCollection.AddWithValue("@PracticeDate", model.PracticeDate);
                    paramCollection.AddWithValue("@InstructorName", model.InstructorName);
-                   //paramCollection.AddWithValue("@ClassType", model.ClassType);
-                   //paramCollection.AddWithValue("@Rating", model.Rating);               
 
                    SqlParameter p = new SqlParameter("@PracticeId", System.Data.SqlDbType.Int);
                    p.Direction = System.Data.ParameterDirection.Output;
@@ -64,8 +62,6 @@ namespace KellyProject.Services
                    p.YogiId = reader.GetSafeInt32(startingIndex++);
                    p.PracticeDate = reader.GetSafeDateTime(startingIndex++);
                    p.InstructorName = reader.GetSafeString(startingIndex++);
-                   //p.ClassType = reader.GetSafeString(startingIndex++);
-                   //p.Rating = reader.GetSafeInt32(startingIndex++);
 
                    if (returnList == null)
                    {
@@ -100,8 +96,6 @@ namespace KellyProject.Services
                   p.YogiId = reader.GetSafeInt32(startingIndex++);
                   p.PracticeDate = reader.GetSafeDateTime(startingIndex++);
                   p.InstructorName = reader.GetSafeString(startingIndex++);
-                  //p.ClassType = reader.GetSafeString(startingIndex++);
-                  //p.Rating = reader.GetSafeInt32(startingIndex++);
 
                   if (list == null)
                   {
@@ -124,10 +118,6 @@ namespace KellyProject.Services
                    paramCollection.AddWithValue("@YogiId", model.YogiId);
                    paramCollection.AddWithValue("@PracticeDate", model.PracticeDate);
                    paramCollection.AddWithValue("@InstructorName", model.InstructorName);
-                   //paramCollection.AddWithValue("@PageTemplate", model.PageTemplate);
-                   //paramCollection.AddWithValue("@PageIsActive", model.PageIsActive);
-                   //paramCollection.AddWithValue("@Slug", model.Slug);
-                   //paramCollection.AddWithValue("@EntityId", model.EntityId);
 
                }, returnParameters: delegate (SqlParameterCollection param)
                {
