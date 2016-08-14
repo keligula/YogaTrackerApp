@@ -13,8 +13,6 @@ CREATE PROC [dbo].[YogaPractice_Insert]
 	@YogiId int,
 	@PracticeDate date,
 	@InstructorName nvarchar(128),
-	--@ClassType nvarchar(MAX),
-	--@Rating int,
 	@PracticeId int OUTPUT
 
 AS
@@ -26,12 +24,9 @@ BEGIN
 	[YogiId],
 	[PracticeDate],
 	[InstructorName]
-	--[ClassType],
-	--[Rating]		
 	)
 
 	VALUES
-		--(@YogiId, @PracticeDate, @InstructorName, @ClassType, @Rating)
 		(@YogiId, @PracticeDate, @InstructorName)
 
 	SET	@PracticeId = SCOPE_IDENTITY()
