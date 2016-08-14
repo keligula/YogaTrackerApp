@@ -1,4 +1,4 @@
-﻿using Keligula.Data;
+using Keligula.Data;
 using KellyProject.Models.Requests;
 using KellyProject.Models.Responses;
 using KellyProject.Services.Interfaces;
@@ -13,7 +13,7 @@ using System.Web.Http;
 using KellyProject.Domain;
 using System.Data;
 
-namespace KellyProject.Controllers.ApiControllers
+namespace Keligula.Controllers.ApiControllers
 {
 
     [RoutePrefix("api/yoga")]
