@@ -47,7 +47,7 @@ namespace KellyProject.Controllers.ApiControllers
         }
 
 
-        // GET: List All Practices Index
+        // GET: List all practices index
         [Route, HttpGet]
         public HttpResponseMessage List()
 
@@ -62,7 +62,7 @@ namespace KellyProject.Controllers.ApiControllers
         }
 
 
-        // GET: List Practices by YogiId
+        // GET: List practices by YogiId
         [Route("{YogiId:int}"), HttpGet]
         public HttpResponseMessage GetPracticesByYogiId(int YogiId)
 
@@ -77,7 +77,7 @@ namespace KellyProject.Controllers.ApiControllers
         }
 
 
-        // PUT: Update Practice by PracticeId
+        // PUT: Update practice by PracticeId
         [Route("{PracticeId:int}"), HttpPut]
         public HttpResponseMessage UpdatePracticeById(YogaPracticeRequestModel model, int PracticeId)
         {
@@ -95,7 +95,7 @@ namespace KellyProject.Controllers.ApiControllers
         }
 
 
-        // DELETE: Practice by Practice Id
+        // DELETE: Practice by PracticeId
         [Route("{PracticeId:int}"), HttpDelete]
         public HttpResponseMessage DeletePagesById(int PracticeId)
         {
