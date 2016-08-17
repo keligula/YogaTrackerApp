@@ -34,7 +34,6 @@
         function _getPracticeByYogiId(yogiId, onGetByYogiSuccess, onGetByYogiError) {
 
             $http.get("/api/yoga" + yogiId).then(onGetByYogiSuccess, onGetByYogiError);
-            console.log("Get By YogiId is working!");
         };
 
         // GET: All Practices / Full Index
