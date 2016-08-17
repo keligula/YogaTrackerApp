@@ -43,7 +43,7 @@ namespace KellyProject.Services
         }
 
 
-        // GET: List All Practices Index
+        // GET: List all practices index
         public List<Domain.YogaPractice> List()
         {
 
@@ -76,7 +76,7 @@ namespace KellyProject.Services
         }
 
 
-        // GET: Select Practices by YogiId
+        // GET: Select practices by YogiId
         public List<Domain.YogaPractice> GetPracticesByYogiId(int YogiId)
         {
             List<Domain.YogaPractice> list = null;
@@ -108,7 +108,7 @@ namespace KellyProject.Services
             return list;
         }
 
-        // PUT: Update Practice by PracticeId
+        // PUT: Update practice by PracticeId
         public void UpdatePracticeById(YogaPracticeRequestModel model, int PracticeId)
 
         {
